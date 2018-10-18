@@ -8,6 +8,14 @@ import java.util.List;
 
 public class RoverControllerApp {
 
+    RoverInstructionFileReader roverInstructionFileReader;
+    RoverInstructionInterpreter roverInstructionInterpreter;
+
+    public RoverControllerApp() {
+        roverInstructionFileReader = new RoverInstructionFileReader();
+        roverInstructionInterpreter = new RoverInstructionInterpreter(roverInstructionFileReader);
+    }
+
     public static void main(String[] args) {
         if (args.length <= 0) {
             System.out.println("Invalid argumants, An input file should be given!!");
@@ -15,13 +23,12 @@ public class RoverControllerApp {
         }
 
         String fileName = args[0];
-        runInstructionsFileAndPrintRovers(fileName);
+        new RoverControllerApp().runInstructionsFileAndPrintRovers(fileName);
     }
 
-    private static void runInstructionsFileAndPrintRovers(String fileName) {
+    public void runInstructionsFileAndPrintRovers(String fileName) {
         try {
-            RoverInstructionFileReader roverInstructionFileReader = new RoverInstructionFileReader();
-            RoverInstructionInterpreter roverInstructionInterpreter = new RoverInstructionInterpreter(roverInstructionFileReader);
+
             roverInstructionInterpreter.runInstructions(fileName);
 
             List<Rover> rovers = roverInstructionInterpreter.getRovers();
