@@ -28,15 +28,12 @@ public class RoverControllerApp {
 
     public void runInstructionsFileAndPrintRovers(String fileName) {
         try {
-
             roverInstructionInterpreter.runInstructions(fileName);
-
             List<Rover> rovers = roverInstructionInterpreter.getRovers();
 
             rovers.forEach(rover -> System.out.println("" + rover.getPosition().getX()
                     + rover.getPosition().getY()
                     + rover.getHeading().getSymbol()));
-
         } catch (Exception e) {
             System.out.println("Operation could not be done, " + e.getMessage());
         }
