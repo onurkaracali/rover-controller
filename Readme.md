@@ -18,8 +18,6 @@ Build project using maven by typing
   
 #### Example Input File
 77  
-
 11N  
-
 MMRMMMR
 
