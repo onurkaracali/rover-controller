@@ -17,7 +17,9 @@ Build project using maven by typing
 <move commands like RMLMRMMMRL>
   
 #### Example Input File
-77
-11N
+77  
+
+11N  
+
 MMRMMMR
 
