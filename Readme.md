@@ -9,12 +9,7 @@ Java 1.8 or higher and maven 3+
 
 Build project using maven by typing
 
-```mvn install```
-
-### Input Format
-<initial plateau boundary position (xy)>  
-<initial rover position and heading like 24N>  
-<move commands like RMLMRMMMRL>  
+```mvn install``` 
   
 #### Example Input File
 77  
